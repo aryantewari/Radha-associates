@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tax Law | Adv. Radha Chaudhary — Bangalore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;0,6..96,500;1,6..96,300;1,6..96,400&family=Outfit:wght@200;300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ═══════════════════════
+   CORE STYLES (Inherited)
+═══════════════════════ */
+:root {
+  --void:#030508;--deep:#060c14;--navy:#0a1628;
+  --gold:#c8952a;--gold-lt:#f0c060;--amber:#ffb830;
+  --cream:#f4ede0;--white:#ffffff;--muted:#6b7d96;
+  --serif:'Bodoni Moda','Georgia',serif;
+  --sans:'Outfit',sans-serif;--impact:'Bebas Neue',sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--void);color:var(--white);overflow-x:hidden;cursor:none;}
+a{text-decoration:none;transition:all .3s;}
+img{display:block;max-width:100%;}
+
+/* CURSOR & GRAIN */
+#cdot{position:fixed;width:8px;height:8px;background:var(--amber);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);}
+#cring{position:fixed;width:36px;height:36px;border:1px solid rgba(240,192,96,.5);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s;}
+.grain{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.022;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px;}
+
+/* TOPBAR & HEADER */
+.topbar{position:relative;z-index:100;background:rgba(3,5,8,.95);border-bottom:1px solid rgba(200,149,42,.1);padding:8px 5%;display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:var(--muted);letter-spacing:.5px;}
+.topbar-l,.topbar-r{display:flex;gap:22px;align-items:center;}
+.tsep{width:1px;height:12px;background:rgba(255,255,255,.08);}
+.topbar i{color:var(--gold);margin-right:6px;font-size:.7rem;}
+.topbar a{color:var(--muted);}
+.topbar a:hover{color:var(--gold-lt);}
+
+/* ═══════════════════════
+   HEADER & NAVIGATION 
+═══════════════════════ */
+header{position:sticky;top:0;z-index:500;background:rgba(3,5,8,.94);backdrop-filter:blur(20px) saturate(1.5);border-bottom:1px solid rgba(200,149,42,.08);padding:0 5%;display:flex;justify-content:space-between;align-items:center;height:72px;}
+.logo{display:flex;flex-direction:column;gap:1px;text-decoration:none;}
+.logo-main{font-family:var(--impact);font-size:1.6rem;letter-spacing:4px;line-height:1;color:var(--white);}
+.logo-main span{color:transparent;-webkit-text-stroke:1.5px var(--gold);}
+.logo-sub{font-size:.57rem;letter-spacing:3px;color:var(--muted);text-transform:uppercase;}
+nav{display:flex;align-items:center;gap:2px;}
+.ni{position:relative;}
+.nl{color:rgba(255,255,255,.65);font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:1.2px;padding:8px 13px;display:flex;align-items:center;gap:5px;position:relative;}
+.nl::after{content:'';position:absolute;bottom:4px;left:13px;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.nl:hover,.nl.active{color:var(--gold-lt);}
+.nl:hover::after,.nl.active::after{width:calc(100% - 26px);}
+.nc{font-size:.55rem;transition:transform .3s;}
+.ni:hover .nc{transform:rotate(180deg);}
+.ndrop{position:absolute;top:calc(100% + 6px);left:0;background:rgba(6,12,20,.98);backdrop-filter:blur(20px);border:1px solid rgba(200,149,42,.15);border-top:2px solid var(--gold);min-width:220px;list-style:none;opacity:0;visibility:hidden;transform:translateY(10px) scale(.98);transform-origin:top left;transition:all .28s cubic-bezier(.4,0,.2,1);z-index:200;}
+.ni:hover .ndrop{opacity:1;visibility:visible;transform:translateY(0) scale(1);}
+.ndrop li{border-bottom:1px solid rgba(255,255,255,.04);}
+.ndrop li:last-child{border:none;}
+.ndrop a{display:flex;align-items:center;gap:10px;padding:10px 18px;font-size:.78rem;color:rgba(255,255,255,.6);transition:all .2s;}
+.ndrop a i{color:var(--gold);font-size:.72rem;width:14px;}
+.ndrop a:hover{background:rgba(200,149,42,.08);color:var(--gold-lt);padding-left:24px;}
+.ncta{background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--void)!important;font-weight:700!important;padding:10px 22px!important;letter-spacing:1.2px;margin-left:10px;font-size:.72rem!important;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);}
+.ncta::after{display:none!important;}
+.ncta:hover{background:linear-gradient(135deg,var(--amber),var(--gold-lt));transform:translateY(-1px);box-shadow:0 8px 24px rgba(240,192,96,.25)!important;color:var(--void)!important;}
+/* ═══════════════════════
+   INNER PAGE HERO
+═══════════════════════ */
+.phero{position:relative;padding:250px 5% 100px;background:var(--deep);overflow:hidden;border-bottom:1px solid rgba(255,255,255,.05);}
+.phbg{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at 80% 20%,rgba(200,149,42,.08) 0%,transparent 50%);}
+.phcirc{position:absolute;width:600px;height:600px;border-radius:50%;border:1px solid rgba(200,149,42,.1);top:-200px;right:-100px;z-index:0;animation:sp 20s linear infinite;}
+@keyframes sp{100%{transform:rotate(360deg);}}
+.phcont{position:relative;z-index:10;max-width:800px;}
+.phcont h1{font-family:var(--serif);font-size:clamp(3rem,6vw,5.5rem);font-weight:300;line-height:1;color:var(--white);margin-bottom:24px;animation:fadeUp .8s .1s both;}
+.phcont h1 em{font-style:italic;color:var(--gold-lt);}
+.phcont p{font-size:1.05rem;color:rgba(255,255,255,.65);line-height:1.8;animation:fadeUp .8s .3s both;max-width:650px;}
+
+/* ═══════════════════════
+   CONTENT SPLIT
+═══════════════════════ */
+.fsplit{padding:100px 5%;display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center;background:var(--void);}
+.fsl h2{font-family:var(--serif);font-size:clamp(2.4rem,4vw,3.8rem);font-weight:300;line-height:1.1;color:var(--white);margin-bottom:24px;}
+.fsl h2 em{font-style:italic;color:transparent;-webkit-text-stroke:1px var(--gold-lt);}
+.fsr p{font-size:.95rem;color:var(--muted);line-height:1.85;margin-bottom:20px;}
+.fsr p:last-child{margin-bottom:0;}
+.fhighlight{border-left:2px solid var(--gold);padding-left:24px;margin-top:30px;}
+.fhighlight h4{font-size:1rem;color:var(--white);font-weight:500;margin-bottom:8px;}
+
+/* ═══════════════════════
+   SERVICES GRID (Specialised)
+═══════════════════════ */
+.svcs{padding:0 5% 120px;background:var(--void);}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.scard{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);padding:40px 30px;position:relative;overflow:hidden;transition:all .4s;backdrop-filter:blur(10px);}
+.scard::before{content:'';position:absolute;top:0;right:0;width:150px;height:150px;background:radial-gradient(circle at top right, rgba(200,149,42,.1),transparent 70%);opacity:0;transition:opacity .4s;}
+.scard:hover{transform:translateY(-8px);border-color:rgba(200,149,42,.25);background:rgba(255,255,255,.04);box-shadow:0 20px 50px rgba(0,0,0,.5);}
+.scard:hover::before{opacity:1;}
+.sic{width:56px;height:56px;border-radius:50%;background:var(--navy);border:1px solid rgba(200,149,42,.2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--gold);margin-bottom:24px;transition:all .4s;}
+.scard:hover .sic{background:var(--gold);color:var(--void);box-shadow:0 0 20px rgba(200,149,42,.3);}
+.scard h3{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--white);margin-bottom:14px;}
+.scard p{font-size:.85rem;color:var(--muted);line-height:1.7;}
+
+/* ═══════════════════════
+   PHILOSOPHY BANNER
+═══════════════════════ */
+.phil{position:relative;padding:120px 5%;background:linear-gradient(135deg,var(--navy),var(--deep));overflow:hidden;text-align:center;}
+.phil::after{content:'COMPLIANCE';position:absolute;font-family:var(--impact);font-size:20rem;color:rgba(255,255,255,.015);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;letter-spacing:10px;}
+.pcont{position:relative;z-index:2;max-width:800px;margin:0 auto;}
+.pcont i{font-size:2.5rem;color:var(--gold);margin-bottom:24px;opacity:.5;}
+.pcont h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.5rem);font-style:italic;font-weight:300;color:var(--white);line-height:1.5;margin-bottom:30px;}
+.pauth{display:flex;align-items:center;justify-content:center;gap:16px;}
+.pimg{width:50px;height:50px;border-radius:50%;border:2px solid var(--gold);object-fit:cover;}
+.patxt h4{font-size:.9rem;color:var(--white);font-weight:500;text-transform:uppercase;letter-spacing:1px;}
+.patxt p{font-size:.7rem;color:var(--gold-lt);letter-spacing:2px;text-transform:uppercase;}
+
+/* ═══════════════════════
+   CTA & FOOTER (Inherited)
+═══════════════════════ */
+.ctasec{padding:130px 5%;background:var(--void);position:relative;overflow:hidden;text-align:center;}
+.cring-bg{position:absolute;border-radius:50%;border:1px solid rgba(200,149,42,.08);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
+.ctain{max-width:680px;margin:0 auto;position:relative;z-index:2;}
+.ctain h2{font-family:var(--serif);font-size:clamp(2.8rem,5vw,5rem);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:20px;}
+.ctain h2 em{font-style:italic;color:var(--gold-lt);}
+.ctain p{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:44px;}
+.ctabtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.ctaout{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.7);padding:15px 28px;font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:1.5px;transition:all .3s;}
+.ctaout:hover{border-color:var(--gold);color:var(--gold-lt);background:rgba(200,149,42,.06);}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+.rev{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s;}
+.revl{opacity:0;transform:translateX(-30px);transition:opacity .7s,transform .7s;}
+.revr{opacity:0;transform:translateX(30px);transition:opacity .7s,transform .7s;}
+.rev.in,.revl.in,.revr.in{opacity:1;transform:translateY(0) translateX(0);}
+
+/* RESPONSIVE */
+@media(max-width:900px){.fsplit{grid-template-columns:1fr;gap:40px;}.svc-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.svc-grid{grid-template-columns:1fr;}}
+
+/* ═══════════════════════
+   CONTACT STRIP
+═══════════════════════ */
+.cstrip{display:grid;grid-template-columns:repeat(3,1fr);background:var(--navy);border-top:1px solid rgba(200,149,42,.1);}
+.csi{padding:44px 40px;display:flex;align-items:center;gap:20px;border-right:1px solid rgba(255,255,255,.04);transition:background .3s;}
+.csi:last-child{border-right:none;}
+.csi:hover{background:rgba(200,149,42,.04);}
+.csic{width:50px;height:50px;border:1px solid rgba(200,149,42,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;}
+.csi:hover .csic{background:var(--gold);border-color:var(--gold);}
+.csi:hover .csic i{color:var(--void);}
+.csic i{font-size:1.1rem;color:var(--gold);transition:color .3s;}
+.cst h4{font-size:.63rem;font-weight:600;color:var(--muted);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:5px;}
+.cst a,.cst p{font-size:.9rem;color:rgba(255,255,255,.75);font-weight:300;}
+.cst a:hover{color:var(--gold-lt);}
+
+/* ═══════════════════════
+   FOOTER
+═══════════════════════ */
+footer{background:var(--void);border-top:1px solid rgba(255,255,255,.04);padding:72px 5% 28px;}
+.fgrid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:50px;margin-bottom:50px;}
+.fbrand{}
+.flogo{font-family:var(--impact);font-size:1.5rem;letter-spacing:4px;color:var(--white);display:block;margin-bottom:4px;}
+.flogo span{color:transparent;-webkit-text-stroke:1px var(--gold);}
+.fsub{font-size:.58rem;color:var(--muted);letter-spacing:3px;text-transform:uppercase;display:block;margin-bottom:20px;}
+.fbrand p{font-size:.82rem;color:var(--muted);line-height:1.75;max-width:280px;margin-bottom:24px;font-weight:300;}
+.socs{display:flex;gap:8px;}
+.soc{width:36px;height:36px;border:1px solid rgba(200,149,42,.2);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.82rem;transition:all .3s;}
+.soc:hover{background:var(--gold);border-color:var(--gold);color:var(--void);}
+.fcol h4{font-size:.68rem;font-weight:600;color:rgba(255,255,255,.8);letter-spacing:2.5px;text-transform:uppercase;padding-bottom:14px;margin-bottom:18px;border-bottom:1px solid rgba(200,149,42,.12);}
+.fcol ul{list-style:none;}
+.fcol ul li{margin-bottom:10px;}
+.fcol ul li a{font-size:.82rem;color:var(--muted);font-weight:300;display:flex;align-items:center;gap:8px;transition:all .3s;}
+.fcol ul li a:hover{color:var(--gold-lt);padding-left:5px;}
+.fcol ul li a i{font-size:.55rem;color:var(--gold);opacity:.5;}
+.fbot{border-top:1px solid rgba(255,255,255,.04);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.fbot p{font-size:.75rem;color:rgba(107,125,150,.45);}
+.fbot a{color:var(--gold);}
+
+/* WHATSAPP */
+.wa{position:fixed;bottom:32px;right:32px;width:54px;height:54px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--white);z-index:9997;box-shadow:0 8px 24px rgba(37,211,102,.4);transition:all .3s;}
+.wa:hover{transform:scale(1.12);box-shadow:0 12px 36px rgba(37,211,102,.55);}
+.wap{position:absolute;width:100%;height:100%;border-radius:50%;background:rgba(37,211,102,.3);animation:wp 2.5s ease-out infinite;}
+@keyframes wp{0%{transform:scale(1);opacity:.7;}100%{transform:scale(2);opacity:0;}}
+
+/* Custom RC Logo Style */
+.rc-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy); 
+  font-family: var(--serif);
+  font-weight: 500;
+  color: var(--gold-lt);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(200, 149, 42, 0.2);
+}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+<div id="cdot"></div>
+<div id="cring"></div>
+
+<div class="topbar">
+  <div class="topbar-l">
+    <span><i class="fa-solid fa-location-dot"></i>Bangalore, Karnataka, India</span>
+    <div class="tsep"></div>
+    <a href="mailto:advocateradhachaudhary@gmail.com"><i class="fa-solid fa-envelope"></i>advocateradhachaudhary@gmail.com</a>
+  </div>
+  <div class="topbar-r">
+    <a href="tel:+919008342829"><i class="fa-solid fa-phone"></i>24/7: +91 9008342829</a>
+    <div class="tsep"></div>
+    <a href="https://wa.me/919008342829" target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+  </div>
+</div>
+
+<header>
+  <a></a>
+  <nav>
+    <div class="ni"><a href="../legalaudience.html" class="nl">Home</a></div>
+    <div class="ni"><a href="../about.html" class="nl">About</a></div>
+    <div class="ni">
+      <a href="#" class="nl active">Practice Areas <i class="fa-solid fa-chevron-down nc"></i></a>
+      <ul class="ndrop">
+        <li><a href="family.html"><i class="fa-solid fa-people-roof"></i>Family</a></li>
+        <li><a href="consumer.html"><i class="fa-solid fa-cart-shopping"></i>Consumer</a></li>
+        <li><a href="banking.html"><i class="fa-solid fa-building-columns"></i>Banking</a></li>
+        <li><a href="intellectual-property.html"><i class="fa-solid fa-copyright"></i>Intellectual Property</a></li>
+        <li><a href="property.html"><i class="fa-solid fa-house-chimney"></i>Property</a></li>
+        <li><a href="cybercrime.html"><i class="fa-solid fa-laptop-code"></i>Cyber Crime</a></li>
+        <li><a href="civil.html"><i class="fa-solid fa-scale-balanced"></i>Civil</a></li>
+        <li><a href="company.html"><i class="fa-solid fa-handshake"></i>Company</a></li>
+        <li><a href="criminal.html"><i class="fa-solid fa-gavel"></i>Criminal</a></li>
+        <li><a href="tax.html"><i class="fa-solid fa-file-invoice-dollar"></i>Tax</a></li>
+        <li><a href="accident.html"><i class="fa-solid fa-car-burst"></i>Accident</a></li>
+        <li><a href="labour.html"><i class="fa-solid fa-helmet-safety"></i>Labour</a></li>
+      </ul>
+    </div>
+    <div class="ni"><a href="../clients.html" class="nl">Clients</a></div>
+    <div class="ni"><a href="../blog/index.html" class="nl">Blog</a></div>
+    <div class="ni"><a href="../contact.html" class="nl">Contact</a></div>
+    <div class="ni"><a href="../contact.html" class="nl ncta">Free Consult</a></div>
+  </nav>
+</header>
+
+<section class="phero" style="background-image: linear-gradient(to right, rgba(3, 5, 8, 0.95) 0%, rgba(3, 5, 8, 0.1) 100%), url('tax.jpeg'); background-size: cover; background-position: right center; padding-top: 250px; min-height: 100vh;">
+  <div class="phcirc"></div>
+  <div class="phcont">
+    <div class="eyebrow"><div class="el"></div><span class="et">Practice Area</span></div>
+    <h1>Tax Law &amp; <br><em>Dispute Resolution</em></h1>
+    <p>Our firm provides services to several blue-chip companies. We also assist on negotiations and disputes with the tax authorities or other authorities as opponent. We resolve disputes for businesses and individuals alike.</p>
+  </div>
+</section>
+
+<section class="fsplit">
+  <div class="fsl revl">
+    <h2>Navigating Complex <em>Tax Disputes</em></h2>
+  </div>
+  <div class="fsr revr">
+    <p>We resolve disputes for businesses — from international groups of companies to owner-managed businesses and one-man firms — and for individuals as well, ensuring compliance and financial protection.</p>
+    <p>We have a well-qualified and experienced team of lawyers. We provide individual attention to all the clients who approach us, and we strive to provide the best of our service in a cost-effective manner.</p>
+    <div class="fhighlight">
+      <h4>Expert Representation</h4>
+      <p style="font-size:.85rem; margin-top:5px; color:var(--muted);">We seamlessly handle complex negotiations and rigorous litigation with tax authorities, ensuring that your corporate and personal financial liabilities are accurately defended.</p>
+    </div>
+  </div>
+</section>
+
+<section class="svcs">
+  <div class="eyebrow" style="justify-content:center;margin-bottom:40px;width:100%;"><div class="el"></div><span class="et">Our Tax Law Services</span></div>
+  <div class="svc-grid">
+    
+    <div class="scard rev" style="transition-delay:0s">
+      <div class="sic"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+      <h3>Direct and Indirect Tax</h3>
+      <p>Comprehensive advisory and dispute resolution spanning both direct income assessments and complex indirect tax frameworks.</p>
+    </div>
+
+    <div class="scard rev" style="transition-delay:.1s">
+      <div class="sic"><i class="fa-solid fa-ship"></i></div>
+      <h3>Customs and Excise Duties</h3>
+      <p>Navigating cross-border taxation, import/export duties, and litigating disputes regarding customs valuations and classifications.</p>
+    </div>
+
+    <div class="scard rev" style="transition-delay:.2s">
+      <div class="sic"><i class="fa-solid fa-scale-unbalanced"></i></div>
+      <h3>Tax Liability Issues</h3>
+      <p>Strategic defense against aggressive tax assessments, penalty impositions, and unwarranted notices from tax authorities.</p>
+    </div>
+
+    <div class="scard rev" style="transition-delay:.3s">
+      <div class="sic"><i class="fa-solid fa-building"></i></div>
+      <h3>Company Taxation</h3>
+      <p>Tailored corporate tax structuring and compliance solutions for blue-chip companies, SMEs, and owner-managed businesses.</p>
+    </div>
+
+    <div class="scard rev" style="transition-delay:.4s">
+      <div class="sic"><i class="fa-solid fa-user-tie"></i></div>
+      <h3>Personal Income Taxation</h3>
+      <p>Advising High Net Worth Individuals (HNIs) and professionals on tax compliance, scrutiny responses, and appellate litigation.</p>
+    </div>
+
+    <div class="scard rev" style="transition-delay:.5s">
+      <div class="sic"><i class="fa-solid fa-globe"></i></div>
+      <h3>Foreign Trade Policy</h3>
+      <p>Advising on compliance with international trade frameworks, export incentives, and mitigating risks in global transactions.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="phil">
+  <div class="pcont rev">
+    <i class="fa-solid fa-quote-left"></i>
+    <h2>"We resolve disputes for businesses - from international groups of companies to owner-managed businesses - and for individuals. We provide individual attention to all the clients who approach us."</h2>
+    <div class="pauth">
+      <div class="rc-logo">RC</div> 
+      <div class="patxt">
+        <h4>Adv. Radha Chaudhary</h4>
+        <p>Lead Counsel</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ctasec">
+  <div class="cring-bg" style="width:400px; height:400px; opacity:0.3;"></div>
+  <div class="cring-bg" style="width:700px; height:700px; opacity:0.1;"></div>
+  <div class="ctain rev">
+    <div class="eyebrow" style="justify-content:center;margin-bottom:16px;"><div class="el"></div><span class="et">Resolve Your Tax Notice</span></div>
+    <h2>Facing a Dispute with <br><em>Tax Authorities?</em></h2>
+    <p>Do not let tax liabilities disrupt your business or personal finances. Contact our specialized team for a cost-effective, strategic resolution.</p>
+    <div class="ctabtns">
+      <a href="../contact.html" class="ctaout" style="background:var(--gold); color:var(--void); border-color:var(--gold); font-weight:700;">Consult Our Team</a>
+      <a href="tel:+919008342829" class="ctaout"><i class="fa-solid fa-phone"></i> +91 9008342829</a>
+    </div>
+  </div>
+</section>
+
+<div class="cstrip">
+  <div class="csi"><div class="csic"><i class="fa-solid fa-location-dot"></i></div><div class="cst"><h4>Location</h4><p>Bangalore, Karnataka, India</p></div></div>
+  <div class="csi"><div class="csic"><i class="fa-solid fa-phone"></i></div><div class="cst"><h4>24/7 Legal Helpline</h4><a href="tel:+919008342829">+91 9008342829</a></div></div>
+  <div class="csi"><div class="csic"><i class="fa-solid fa-envelope"></i></div><div class="cst"><h4>Email</h4><a href="mailto:advocateradhachaudhary@gmail.com">advocateradhachaudhary@gmail.com</a></div></div>
+</div>
+
+<footer>
+  <div class="fgrid">
+    <div class="fbrand">
+      <span class="flogo">Legal<span>Audience</span></span>
+      <span class="fsub">Adv. Radha Chaudhary &amp; Associates</span>
+      <p>Strategic legal counsel and passionate advocacy protecting your interests across all courts of Bangalore and India.</p>
+      <div class="socs">
+        <a href="https://wa.me/919008342829" target="_blank" class="soc"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/adv-radha-chaudhary-238565b/" target="_blank" class="soc"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://thelegalaudience.wordpress.com/blog/" target="_blank" class="soc"><i class="fa-brands fa-wordpress"></i></a>
+      </div>
+    </div>
+    <div class="fcol"><h4>Quick Links</h4><ul><li><a href="../legalaudience.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li><li><a href="../about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li><li><a href="../contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li></ul></div>
+    <div class="fcol"><h4>Practice Areas</h4><ul><li><a href="company.html"><i class="fa-solid fa-chevron-right"></i> Company</a></li><li><a href="tax.html"><i class="fa-solid fa-chevron-right"></i> Tax</a></li><li><a href="criminal.html"><i class="fa-solid fa-chevron-right"></i> Criminal</a></li><li><a href="banking.html"><i class="fa-solid fa-chevron-right"></i> Banking & DRT</a></li></ul></div>
+    <div class="fcol"><h4>Contact</h4><ul><li><a href="tel:+919008342829"><i class="fa-solid fa-phone"></i> +91 9008342829</a></li><li><a href="mailto:advocateradhachaudhary@gmail.com"><i class="fa-solid fa-envelope"></i> Email Us</a></li><li><a href="https://wa.me/919008342829" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li></ul></div>
+  </div>
+  <div class="fbot">
+    <p>&copy; 2026 <a href="#">Legal Audience</a> — Adv. Radha Chaudhary. All rights reserved.</p>
+    <p>Bangalore, Karnataka, India</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/919008342829" class="wa" target="_blank">
+  <div class="wap"></div>
+  <i class="fa-brands fa-whatsapp" style="position:relative;z-index:1;"></i>
+</a>
+
+<script>
+// Custom Cursor Logic
+const cdot=document.getElementById('cdot'),cring=document.getElementById('cring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cdot.style.left=mx+'px';cdot.style.top=my+'px';});
+(function ar(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;cring.style.left=rx+'px';cring.style.top=ry+'px';requestAnimationFrame(ar);})();
+document.querySelectorAll('a,button,.scard').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cring.style.width='60px';cring.style.height='60px';cring.style.borderColor='rgba(240,192,96,.8)';cdot.style.transform='translate(-50%,-50%) scale(0)';});
+  el.addEventListener('mouseleave',()=>{cring.style.width='36px';cring.style.height='36px';cring.style.borderColor='rgba(240,192,96,.5)';cdot.style.transform='translate(-50%,-50%) scale(1)';});
+});
+
+// Scroll Reveal
+const allR=[...document.querySelectorAll('.rev,.revl,.revr')];
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add('in'),0);
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.15});
+allR.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

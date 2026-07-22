@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Property Dispute & Title Due Diligence | Adv. Radha Chaudhary — Bangalore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;0,6..96,500;1,6..96,300;1,6..96,400&family=Outfit:wght@200;300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+  --void:#030508;--deep:#060c14;--navy:#0a1628;
+  --gold:#c8952a;--gold-lt:#f0c060;--amber:#ffb830;
+  --white:#ffffff;--muted:#6b7d96;
+  --serif:'Bodoni Moda','Georgia',serif;--sans:'Outfit',sans-serif;--impact:'Bebas Neue',sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:var(--sans);background:var(--void);color:var(--white);overflow-x:hidden;cursor:none;}
+a{text-decoration:none;transition:all .3s;}
+img{display:block;max-width:100%;}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;margin-bottom:18px;}
+.el{width:32px;height:1px;background:var(--gold);}
+.et{font-size:.68rem;font-weight:600;color:var(--gold);letter-spacing:3.5px;text-transform:uppercase;}
+
+/* CURSOR & GRAIN */
+#cdot{position:fixed;width:8px;height:8px;background:var(--amber);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);}
+#cring{position:fixed;width:36px;height:36px;border:1px solid rgba(240,192,96,.5);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s;}
+.grain{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.022;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px;}
+
+/* TOPBAR & HEADER */
+.topbar{position:relative;z-index:100;background:rgba(3,5,8,.95);border-bottom:1px solid rgba(200,149,42,.1);padding:8px 5%;display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:var(--muted);letter-spacing:.5px;}
+.topbar-l,.topbar-r{display:flex;gap:22px;align-items:center;}
+.tsep{width:1px;height:12px;background:rgba(255,255,255,.08);}
+.topbar i{color:var(--gold);margin-right:6px;font-size:.7rem;}
+.topbar a{color:var(--muted);}
+.topbar a:hover{color:var(--gold-lt);}
+
+header{position:sticky;top:0;z-index:500;background:rgba(3,5,8,.94);backdrop-filter:blur(20px) saturate(1.5);border-bottom:1px solid rgba(200,149,42,.08);padding:0 5%;display:flex;justify-content:space-between;align-items:center;height:72px;}
+.logo{display:flex;flex-direction:column;gap:1px;}
+.logo-main{font-family:var(--impact);font-size:1.6rem;letter-spacing:4px;line-height:1;color:var(--white);}
+.logo-main span{color:transparent;-webkit-text-stroke:1.5px var(--gold);}
+.logo-sub{font-size:.57rem;letter-spacing:3px;color:var(--muted);text-transform:uppercase;}
+nav{display:flex;align-items:center;gap:2px;}
+.ni{position:relative;}
+.nl{color:rgba(255,255,255,.65);font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:1.2px;padding:8px 13px;display:flex;align-items:center;gap:5px;position:relative;}
+.nl::after{content:'';position:absolute;bottom:4px;left:13px;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.nl:hover,.nl.active{color:var(--gold-lt);}
+.nl:hover::after,.nl.active::after{width:calc(100% - 26px);}
+.nc{font-size:.55rem;transition:transform .3s;}
+.ni:hover .nc{transform:rotate(180deg);}
+.ndrop{position:absolute;top:calc(100% + 6px);left:0;background:rgba(6,12,20,.98);backdrop-filter:blur(20px);border:1px solid rgba(200,149,42,.15);border-top:2px solid var(--gold);min-width:220px;list-style:none;opacity:0;visibility:hidden;transform:translateY(10px) scale(.98);transition:all .28s ease;z-index:200;}
+.ni:hover .ndrop{opacity:1;visibility:visible;transform:translateY(0) scale(1);}
+.ndrop li{border-bottom:1px solid rgba(255,255,255,.04);}
+.ndrop a{display:flex;align-items:center;gap:10px;padding:10px 18px;font-size:.78rem;color:rgba(255,255,255,.6);transition:all .2s;}
+.ndrop a i{color:var(--gold);font-size:.72rem;width:14px;}
+.ndrop a:hover{background:rgba(200,149,42,.08);color:var(--gold-lt);padding-left:24px;}
+.ncta{background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--void)!important;font-weight:700!important;padding:10px 22px!important;letter-spacing:1.2px;margin-left:10px;font-size:.72rem!important;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);}
+.ncta:hover{background:linear-gradient(135deg,var(--amber),var(--gold-lt));transform:translateY(-1px);box-shadow:0 8px 24px rgba(240,192,96,.25)!important;}
+
+/* BANNER */
+/* BANNER */
+.pbanner {
+  /* Top padding badha di hai taaki text thoda niche aaye aur image clear dikhe */
+  padding: 200px 5% 130px; 
+  /* Min-height thodi badha di hai taaki scales cut na ho */
+  min-height: 70vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background: 
+    radial-gradient(ellipse at 50% 0%, rgba(200, 149, 42, 0.3), transparent 60%), 
+    linear-gradient(rgba(3, 5, 8, 0.5), rgba(6, 12, 20, 0.85)), 
+    url('property.jpeg'); 
+  background-size: cover;
+  /* 'center bottom' hata kar 'center center' kar diya taaki dono taraf se image fit baithe */
+  background-position: center center; 
+  background-repeat: no-repeat;
+}
+.pbanner h1{font-family:var(--serif);font-size:clamp(2.6rem,5.5vw,4.6rem);font-weight:300;line-height:1.1;margin-bottom:24px;}
+.pbanner h1 em{font-style:italic;color:var(--gold-lt);}
+.pbanner p{max-width:640px;margin:0 auto;color:var(--muted);font-size:.95rem;line-height:1.85;font-weight:300;}
+
+/* CHECKLIST TABLE */
+.sec{padding:80px 5%;max-width:1100px;margin:0 auto;}
+.sec h2{font-family:var(--serif);font-weight:300;font-size:clamp(2rem,3.5vw,3rem);margin-bottom:14px;}
+.sec h2 em{font-style:italic;color:var(--gold-lt);}
+.sec>p.lead{color:var(--muted);font-size:.88rem;line-height:1.8;max-width:620px;margin-bottom:44px;}
+.vtable{width:100%;border-collapse:collapse;background:var(--deep);border:1px solid rgba(255,255,255,.06);}
+.vtable th{text-align:left;font-size:.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);padding:16px 20px;border-bottom:1px solid rgba(200,149,42,.2);}
+.vtable td{padding:18px 20px;font-size:.83rem;color:rgba(255,255,255,.75);border-bottom:1px solid rgba(255,255,255,.05);font-weight:300;line-height:1.6;}
+.vtable tr:last-child td{border-bottom:none;}
+.vtable td:first-child{color:var(--gold-lt);font-weight:500;white-space:nowrap;}
+
+/* PROCESS */
+/* PROCESS */
+.psec2{background:var(--deep);}
+.strow{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.04);margin-top:10px;}
+
+.step{
+  background:var(--void);
+  padding:34px 24px;
+  position:relative;
+  overflow:hidden;
+  transition:all .4s ease;
+}
+/* Corner Gold Glow */
+.step::before{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  width:150px;
+  height:150px;
+  background:radial-gradient(circle at top right, rgba(200,149,42,.15),transparent 70%);
+  opacity:0;
+  transition:opacity .4s ease;
+}
+/* Hover State for Step Box */
+.step:hover{
+  background:rgba(200,149,42,.03);
+  box-shadow:inset 0 0 0 1px rgba(200,149,42,.3); /* Creates an inner glowing border */
+}
+.step:hover::before{
+  opacity:1;
+}
+
+.stcir{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  border:1px solid rgba(200,149,42,.3);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:20px;
+  transition:all .4s ease;
+}
+/* Hover State for Icon Circle */
+.step:hover .stcir{
+  background:var(--gold);
+  border-color:var(--gold);
+  box-shadow:0 0 20px rgba(200,149,42,.4);
+}
+.stcir i{
+  color:var(--gold);
+  font-size:1.1rem;
+  transition:color .4s ease;
+}
+/* Icon turns dark when circle turns gold */
+.step:hover .stcir i{
+  color:var(--void);
+}
+
+.step h3{font-family:var(--serif);font-weight:400;font-size:1.1rem;margin-bottom:8px;}
+.step p{font-size:.78rem;color:var(--muted);line-height:1.65;}
+/* FORM */
+.fsec{background:var(--navy);padding:90px 5%;}
+.fwrap{max-width:640px;margin:0 auto;text-align:center;}
+.fwrap h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,3vw,2.6rem);margin-bottom:14px;}
+.fwrap h2 em{font-style:italic;color:var(--gold-lt);}
+.fwrap>p{color:var(--muted);font-size:.85rem;margin-bottom:40px;}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px;text-align:left;}
+form .full{grid-column:1/-1;}
+form label{display:block;font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-lt);margin-bottom:7px;}
+form input,form select,form textarea{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(200,149,42,.2);padding:12px 14px;color:var(--white);font-family:var(--sans);font-size:.85rem;outline:none;}
+form input:focus,form select:focus,form textarea:focus{border-color:var(--amber);}
+form select option{background:var(--navy);}
+form button{grid-column:1/-1;background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--void);border:none;padding:16px;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.78rem;cursor:pointer;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);margin-top:8px;}
+form button:hover{box-shadow:0 8px 30px rgba(240,192,96,.3);}
+.fnote{font-size:.7rem;color:var(--muted);margin-top:16px;}
+
+@media(max-width:768px){.strow{grid-template-columns:1fr 1fr;}form{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+<div id="cdot"></div>
+<div id="cring"></div>
+
+<div class="topbar">
+  <div class="topbar-l">
+    <span><i class="fa-solid fa-location-dot"></i>Bangalore, Karnataka, India</span>
+    <div class="tsep"></div>
+    <a href="mailto:advocateradhachaudhary@gmail.com"><i class="fa-solid fa-envelope"></i>advocateradhachaudhary@gmail.com</a>
+  </div>
+  <div class="topbar-r">
+    <a href="tel:+919008342829"><i class="fa-solid fa-phone"></i>+91 9008342829</a>
+  </div>
+</div>
+
+<header>
+  <a>
+  </a>
+  <nav>
+   <div class="ni"><a href="../legalaudience.html" class="nl">Home</a></div>
+    <div class="ni"><a href="about.php" class="nl">About</a></div>
+    <div class="ni">
+      <a href="#" class="nl active">Practice Areas <i class="fa-solid fa-chevron-down nc"></i></a>
+      <ul class="ndrop">
+        <li><a href="family.html"><i class="fa-solid fa-people-roof"></i>Family</a></li>
+        <li><a href="consumer.html"><i class="fa-solid fa-cart-shopping"></i>Consumer</a></li>
+        <li><a href="banking.html"><i class="fa-solid fa-building-columns"></i>Banking</a></li>
+        <li><a href="intellectual-property.html"><i class="fa-solid fa-copyright"></i>Intellectual Property</a></li>
+        <li><a href="property.html"><i class="fa-solid fa-house-chimney"></i>Property</a></li>
+        <li><a href="cybercrime.html"><i class="fa-solid fa-laptop-code"></i>Cyber Crime</a></li>
+        <li><a href="civil.html"><i class="fa-solid fa-scale-balanced"></i>Civil</a></li>
+        <li><a href="company.html"><i class="fa-solid fa-handshake"></i>Company</a></li>
+        <li><a href="criminal.html"><i class="fa-solid fa-gavel"></i>Criminal</a></li>
+        <li><a href="tax.html"><i class="fa-solid fa-file-invoice-dollar"></i>Tax</a></li>
+        <li><a href="accident.html"><i class="fa-solid fa-car-burst"></i>Accident</a></li>
+        <li><a href="labour.html"><i class="fa-solid fa-helmet-safety"></i>Labour</a></li>
+      </ul>
+    </div>
+    <div class="ni"><a href="clients.php" class="nl">Clients</a></div>
+    <div class="ni"><a href="blog/index.php" class="nl">Blog</a></div>
+    <div class="ni"><a href="contact.php" class="nl">Contact</a></div>
+    <div class="ni"><a href="contact.php" class="nl ncta">Free Consult</a></div>
+  </nav>
+</header>
+
+<section class="pbanner">
+  <div class="eyebrow" style="justify-content:center;"><div class="el"></div><span class="et">Property Practice</span></div>
+  <h1>Property Dispute &amp; <em>Title Due Diligence</em></h1>
+  <p>Safeguarding your real estate investments across Karnataka. Before you buy, sell or litigate — we verify the title is clear, compliant, and free from hidden disputes.</p>
+</section>
+
+<section class="sec">
+  <div class="eyebrow"><div class="el"></div><span class="et">Verification Checklist</span></div>
+  <h2>What We <em>Examine</em></h2>
+  <p class="lead">Every property carries a paper trail. We trace it end to end so you know exactly what you're signing up for.</p>
+  <table class="vtable">
+    <tr><th>Category</th><th>Documents & Checks</th></tr>
+    <tr><td>Ownership History</td><td>Original Mother Deed, 30-year Encumbrance Certificate (EC), and RTC (Form 11A / Pahani).</td></tr>
+    <tr><td>Municipal &amp; Zoning</td><td>BBMP / BDA Khata verification, land conversion (NA) orders, and up-to-date property tax receipts.</td></tr>
+    <tr><td>Construction Legality</td><td>Sanctioned building plan, Occupancy Certificate (OC), and RERA registration status where applicable.</td></tr>
+    <tr><td>Litigation Search</td><td>Karnataka High Court, DRT, and local civil court records — checked for pending suits, injunctions, or attachments.</td></tr>
+    <tr><td>Financial Encumbrances</td><td>Bank mortgages, loan liens, and any charges registered against the property.</td></tr>
+  </table>
+</section>
+
+<section class="sec psec2" style="max-width:100%;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="eyebrow"><div class="el"></div><span class="et">How We Work</span></div>
+    <h2>Our <em>Process</em></h2>
+  </div>
+  <div class="strow">
+    <div class="step"><div class="stcir"><i class="fa-solid fa-folder-open"></i></div><h3>Document Collection</h3><p>Sale deeds, Khatas, tax receipts and government approvals gathered from you and public records.</p></div>
+    <div class="step"><div class="stcir"><i class="fa-solid fa-magnifying-glass"></i></div><h3>Legal Scrutiny</h3><p>Expert review of the encumbrance chain and title history for gaps or defects.</p></div>
+    <div class="step"><div class="stcir"><i class="fa-solid fa-gavel"></i></div><h3>Litigation Search</h3><p>High Court and local court records checked for any ongoing or past disputes.</p></div>
+    <div class="step"><div class="stcir"><i class="fa-solid fa-file-signature"></i></div><h3>Legal Opinion</h3><p>A plain-language report summarising risk, and how to proceed or resolve a dispute.</p></div>
+  </div>
+</section>
+
+<section class="fsec">
+  <div class="fwrap">
+    <div class="eyebrow" style="justify-content:center;"><div class="el"></div><span class="et">Start a Verification</span></div>
+    <h2>Tell Us About the <em>Property</em></h2>
+    <p>Share the basics — we'll get back to you within 24 hours with next steps.</p>
+    <form action="process_enquiry.php" method="POST">
+  <div>
+    <label>Full Name</label>
+    <input type="text" name="fullName" required>
+  </div>
+  <div>
+    <label>Phone Number</label>
+    <input type="tel" name="phone" required>
+  </div>
+  <div class="full">
+    <label>Email</label>
+    <input type="email" name="email" required>
+  </div>
+  <div class="full">
+    <label>Property Location</label>
+    <input type="text" name="location" placeholder="e.g. BDA layout, BBMP limits, taluk">
+  </div>
+  <div class="full">
+    <label>What do you need?</label>
+    <select name="requirement">
+      <option value="Title / Encumbrance Verification">Title / Encumbrance Verification</option>
+      <option value="Ongoing Property Dispute">Ongoing Property Dispute</option>
+      <option value="Khata / RERA Compliance Check">Khata / RERA Compliance Check</option>
+      <option value="Sale / Purchase Due Diligence">Sale / Purchase Due Diligence</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+  <div class="full">
+    <label>Brief Description</label>
+    <textarea name="message" rows="4" placeholder="Describe the property and the issue, if any"></textarea>
+  </div>
+  
+  <!-- Hidden field to send "Property" directly to MongoDB -->
+  <input type="hidden" name="practiceArea" value="Property">
+  
+  <button type="submit">Request Verification Report</button>
+</form>
+    <p class="fnote">Confidential and reviewed personally by Adv. Radha Chaudhary's team.</p>
+  </div>
+</section>
+
+<script>
+// Custom Cursor Logic
+const cdot=document.getElementById('cdot'),cring=document.getElementById('cring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cdot.style.left=mx+'px';cdot.style.top=my+'px';});
+(function ar(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;cring.style.left=rx+'px';cring.style.top=ry+'px';requestAnimationFrame(ar);})();
+document.querySelectorAll('a,button,select,input,textarea,.step').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cring.style.width='60px';cring.style.height='60px';cring.style.borderColor='rgba(240,192,96,.8)';cdot.style.transform='translate(-50%,-50%) scale(0)';});
+  el.addEventListener('mouseleave',()=>{cring.style.width='36px';cring.style.height='36px';cring.style.borderColor='rgba(240,192,96,.5)';cdot.style.transform='translate(-50%,-50%) scale(1)';});
+});
+</script>
+
+</body>
+</html>
