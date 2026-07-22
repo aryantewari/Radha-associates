@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legal Audience | Adv. Radha Chaudhary — Bangalore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;0,6..96,500;1,6..96,300;1,6..96,400&family=Outfit:wght@200;300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --void:#030508;--deep:#060c14;--navy:#0a1628;
+  --gold:#c8952a;--gold-lt:#f0c060;--amber:#ffb830;
+  --cream:#f4ede0;--white:#ffffff;--muted:#6b7d96;
+  --glass:rgba(255,255,255,.04);--glass-b:rgba(255,255,255,.07);
+  --serif:'Bodoni Moda','Georgia',serif;
+  --sans:'Outfit',sans-serif;--impact:'Bebas Neue',sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--void);color:var(--white);overflow-x:hidden;cursor:none;}
+a{text-decoration:none;transition:all .3s;}
+img{display:block;max-width:100%;}
+
+/* CURSOR */
+#cdot{position:fixed;width:8px;height:8px;background:var(--amber);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);}
+#cring{position:fixed;width:36px;height:36px;border:1px solid rgba(240,192,96,.5);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s;}
+
+/* GRAIN */
+.grain{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.022;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px;}
+
+/* TOPBAR */
+.topbar{position:relative;z-index:100;background:#FFFFFF;border-bottom:1px solid rgba(27,94,58,.15);padding:8px 5%;display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:#111111;letter-spacing:.5px;}
+.topbar-l,.topbar-r{display:flex;gap:22px;align-items:center;}
+.tsep{width:1px;height:12px;background:rgba(27,94,58,.2);}
+.topbar i{color:#B8860B;margin-right:6px;font-size:.7rem;}
+.topbar a{color:#1B5E3A;}
+.topbar a:hover{color:#B8860B;}
+.topbar span{color:#1B5E3A;}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:500;background:#FFFFFF;backdrop-filter:none;border-bottom:1px solid rgba(27,94,58,.15);padding:0 5%;display:flex;justify-content:space-between;align-items:center;height:110px;}
+.logo{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  text-decoration:none;
+  background:none;
+  padding:0;
+  border-radius:0;
+}
+.logo-mark{
+  height:48px;
+  width:auto;
+}
+.logo-text{
+  width:180px;
+  height:auto;
+  object-fit:contain;
+}
+.logo{
+  position:relative; /* tooltip positioning ke liye zaroori */
+}
+.logo-tooltip{
+  position:absolute;
+  top:calc(100% + 10px);
+  left:50%;
+  transform:translateX(-50%) translateY(-8px);
+  background:#1B5E3A;
+  color:#FFFFFF;
+  font-family:var(--sans);
+  font-size:.7rem;
+  font-weight:500;
+  letter-spacing:.5px;
+  white-space:nowrap;
+  padding:8px 16px;
+  border-radius:4px;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .3s ease, transform .3s ease;
+  z-index:600;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+.logo-tooltip::before{
+  content:'';
+  position:absolute;
+  bottom:100%;
+  left:50%;
+  transform:translateX(-50%);
+  border:6px solid transparent;
+  border-bottom-color:#1B5E3A;
+}
+.logo:hover .logo-tooltip{
+  opacity:1;
+  visibility:visible;
+  transform:translateX(-50%) translateY(0);
+}
+
+.logo-main{font-family:var(--impact);font-size:1.6rem;letter-spacing:4px;line-height:1;color:var(--white);}
+.logo-main span{color:transparent;-webkit-text-stroke:1.5px var(--gold);}
+.logo-sub{font-size:.57rem;letter-spacing:3px;color:var(--muted);text-transform:uppercase;}
+nav{display:flex;align-items:center;gap:2px;}
+.ni{position:relative;}
+.nl{color:#1B5E3A;font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:1.2px;padding:8px 13px;display:flex;align-items:center;gap:5px;position:relative;}
+.nl::after{content:'';position:absolute;bottom:4px;left:13px;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.nl:hover,.nl.active{color:var(--gold-lt);}
+.nl:hover::after,.nl.active::after{width:calc(100% - 26px);}
+
+.ni:hover .nc{transform:rotate(180deg);}
+.ndrop{position:absolute;top:calc(100% + 6px);left:0;background:#FFFFFF;backdrop-filter:none;border:1px solid rgba(27,94,58,.15);border-top:2px solid #B8860B;min-width:220px;list-style:none;opacity:0;visibility:hidden;transform:translateY(10px) scale(.98);transform-origin:top left;transition:all .28s cubic-bezier(.4,0,.2,1);z-index:200;}
+.ni:hover .ndrop{opacity:1;visibility:visible;transform:translateY(0) scale(1);}
+.ndrop li{border-bottom:1px solid rgba(255,255,255,.04);}
+.ndrop li:last-child{border:none;}
+.ndrop a{display:flex;align-items:center;gap:10px;padding:10px 18px;font-size:.78rem;color:#1B5E3A;transition:all .2s;}
+.ndrop a i{color:var(--gold);font-size:.72rem;width:14px;}
+.ndrop a:hover{background:rgba(200,149,42,.08);color:var(--gold-lt);padding-left:24px;}
+.ncta{background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--void)!important;font-weight:700!important;padding:10px 22px!important;letter-spacing:1.2px;margin-left:10px;font-size:.72rem!important;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);}
+.ncta::after{display:none!important;}
+.ncta:hover{background:linear-gradient(135deg,var(--amber),var(--gold-lt));transform:translateY(-1px);box-shadow:0 8px 24px rgba(240,192,96,.25)!important;color:var(--void)!important;}
+
+/* ═══════════════════════
+   HERO
+═══════════════════════ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;}
+.hvid{position:absolute;inset:0;z-index:0;}
+.hvid video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);object-fit:cover;}
+.hov1{position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,rgba(3,5,8,.9) 0%,rgba(3,5,8,.7) 50%,rgba(3,5,8,.3) 100%);}
+.hov2{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at 15% 50%,rgba(200,149,42,.07) 0%,transparent 55%);}
+.hscans{position:absolute;inset:0;z-index:3;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.04) 2px,rgba(0,0,0,.04) 4px);pointer-events:none;}
+#hcanvas{position:absolute;inset:0;z-index:4;pointer-events:none;opacity:.5;}
+
+/* animated gold lines */
+.hlines{position:absolute;inset:0;z-index:4;pointer-events:none;}
+.hl{position:absolute;background:linear-gradient(to right,transparent,var(--gold),transparent);height:1px;opacity:.18;animation:lsweep 8s ease-in-out infinite;}
+.hl:nth-child(1){width:60%;top:20%;left:18%;animation-delay:0s;}
+.hl:nth-child(2){width:35%;bottom:25%;right:8%;animation-delay:3.5s;}
+@keyframes lsweep{0%,100%{opacity:.08;transform:scaleX(.8);}50%{opacity:.28;transform:scaleX(1);}}
+
+/* HERO BODY */
+.hbody{position:relative;z-index:10;padding:0 5%;width:100%;display:grid;grid-template-columns:1fr 440px;gap:60px;align-items:center;max-width:1400px;margin:0 auto;}
+.hbadge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(200,149,42,.3);background:rgba(200,149,42,.06);backdrop-filter:blur(10px);padding:7px 18px;margin-bottom:32px;animation:fadeUp .8s .1s both;}
+.hbdot{width:6px;height:6px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber);animation:blink 2s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1;box-shadow:0 0 10px var(--amber);}50%{opacity:.35;box-shadow:none;}}
+.hbadge span{font-size:.68rem;font-weight:600;color:var(--gold-lt);letter-spacing:3px;text-transform:uppercase;}
+.hh1{font-family:var(--serif);font-size:clamp(3.5rem,7vw,7rem);font-weight:300;line-height:.95;color:var(--white);margin-bottom:32px;animation:fadeUp .9s .25s both;}
+.hh1 .l1{display:block;}
+.hh1 .l2{display:block;font-style:italic;color:transparent;-webkit-text-stroke:1px var(--gold-lt);text-shadow:0 0 40px rgba(240,192,96,.12);}
+.hh1 .l3{display:block;font-style:italic;color:var(--gold-lt);}
+.hdesc{font-size:1rem;font-weight:300;color:rgba(255,255,255,.6);line-height:1.85;max-width:500px;margin-bottom:40px;animation:fadeUp .9s .4s both;}
+.hacts{display:flex;gap:16px;flex-wrap:wrap;animation:fadeUp .9s .55s both;}
+.hbtnp{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--void);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:1.5px;padding:16px 34px;clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);transition:all .35s;position:relative;overflow:hidden;}
+.hbtnp::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.2),transparent);opacity:0;transition:.3s;}
+.hbtnp:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(240,192,96,.3);color:var(--void);}
+.hbtnp:hover::before{opacity:1;}
+.hbtng{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.75);font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:1.2px;padding:16px 28px;backdrop-filter:blur(10px);transition:all .3s;}
+.hbtng:hover{border-color:var(--gold);color:var(--gold-lt);background:rgba(200,149,42,.06);}
+.hstats{display:flex;gap:36px;margin-top:56px;padding-top:40px;border-top:1px solid rgba(255,255,255,.07);animation:fadeUp .9s .7s both;}
+.hs .sn{font-family:var(--impact);font-size:2.8rem;letter-spacing:2px;line-height:1;background:linear-gradient(135deg,var(--amber),var(--gold-lt));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:block;}
+.hs .sl{font-size:.63rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-top:5px;display:block;}
+
+/* HERO GLASS CARD */
+.hcard{background:rgba(255,255,255,.03);backdrop-filter:blur(24px) saturate(1.4);border:1px solid rgba(255,255,255,.08);border-top:1px solid rgba(255,255,255,.15);padding:36px 30px;position:relative;animation:fadeLeft .9s .35s both;}
+.hcard::before{content:'';position:absolute;top:0;left:20%;right:20%;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);}
+.hch{display:flex;align-items:center;gap:16px;margin-bottom:26px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.06);}
+.hcav{width:60px;height:60px;border-radius:50%;border:2px solid var(--gold);overflow:hidden;flex-shrink:0;box-shadow:0 0 24px rgba(200,149,42,.3);background:var(--navy);display:flex;align-items:center;justify-content:center;}
+.hcav img{width:100%;height:100%;object-fit:cover;}
+.hcav i{font-size:1.6rem;color:var(--gold);}
+.hci h3{font-family:var(--serif);font-size:1.18rem;font-weight:400;color:var(--white);margin-bottom:3px;}
+.hci p{font-size:.66rem;color:var(--gold-lt);letter-spacing:1.5px;text-transform:uppercase;}
+.hcf h4{font-family:var(--serif);font-size:1.05rem;font-weight:300;color:rgba(255,255,255,.8);margin-bottom:16px;font-style:italic;}
+.hff{margin-bottom:11px;}
+.hff input,.hff select,.hff textarea{width:100%;background:rgba(255,255,255,.04);border:none;border-bottom:1px solid rgba(200,149,42,.2);padding:11px 13px;font-family:var(--sans);font-size:.8rem;color:var(--white);outline:none;transition:all .3s;appearance:none;}
+.hff input::placeholder,.hff textarea::placeholder{color:rgba(255,255,255,.22);}
+.hff input:focus,.hff select:focus,.hff textarea:focus{border-bottom-color:var(--amber);background:rgba(255,255,255,.05);}
+.hff select option{background:#0a1628;}
+.hff2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.hfsub{width:100%;background:linear-gradient(135deg,var(--gold),var(--amber));color:var(--void);border:none;padding:14px;font-family:var(--sans);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;cursor:pointer;transition:all .3s;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);margin-top:5px;}
+.hfsub:hover{box-shadow:0 8px 30px rgba(240,192,96,.3);transform:translateY(-2px);}
+
+/* scroll hint */
+.scroll-hint{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;z-index:10;animation:fadeUp .9s 1.2s both;}
+.scroll-hint span{font-size:.58rem;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:3px;}
+.smouse{width:24px;height:38px;border:1px solid rgba(255,255,255,.2);border-radius:12px;display:flex;justify-content:center;padding-top:6px;}
+.swheel{width:3px;height:8px;background:var(--gold);border-radius:2px;animation:sw 2s ease-in-out infinite;}
+@keyframes sw{0%{transform:translateY(0);opacity:1;}100%{transform:translateY(14px);opacity:0;}}
+
+/* ═══════════════════════
+   MARQUEE
+═══════════════════════ */
+.mqwrap{background:linear-gradient(135deg,var(--gold),var(--amber));overflow:hidden;}
+.mqtrack{display:flex;width:max-content;animation:mq 30s linear infinite;}
+.mqi{display:inline-flex;align-items:center;gap:20px;padding:14px 30px;font-family:var(--impact);font-size:1rem;letter-spacing:3px;color:var(--void);white-space:nowrap;}
+.mqdot{color:rgba(0,0,0,.22);font-size:.5rem;}
+@keyframes mq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* ═══════════════════════
+   ABOUT
+═══════════════════════ */
+.about{padding:130px 5%;display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;background:var(--void);position:relative;overflow:hidden;}
+.about::before{content:'';position:absolute;top:-300px;right:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(200,149,42,.04),transparent 60%);pointer-events:none;}
+.avis{position:relative;}
+.aimgw{position:relative;padding:24px 0 0 24px;}
+.aimgw::before{content:'';position:absolute;top:0;left:0;width:70%;height:70%;border-top:1px solid rgba(200,149,42,.4);border-left:1px solid rgba(200,149,42,.4);}
+.aimgw::after{content:'';position:absolute;bottom:-16px;right:-16px;width:50%;height:50%;border-bottom:1px solid rgba(200,149,42,.2);border-right:1px solid rgba(200,149,42,.2);}
+.aimgw img{width:100%;height:auto;object-fit:contain;position:relative;z-index:2;display:block;}
+.abadge{position:absolute;bottom:40px;left:-30px;z-index:3;background:linear-gradient(135deg,var(--gold),var(--amber));padding:22px 26px;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);box-shadow:0 20px 50px rgba(200,149,42,.4);}
+.abadge .bn{font-family:var(--impact);font-size:3rem;color:var(--void);line-height:1;letter-spacing:2px;display:block;}
+.abadge .bt{font-size:.63rem;color:rgba(0,0,0,.55);letter-spacing:2px;text-transform:uppercase;display:block;margin-top:2px;}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;margin-bottom:20px;}
+.el{width:32px;height:1px;background:var(--gold);}
+.et{font-size:.68rem;font-weight:600;color:var(--gold);letter-spacing:3.5px;text-transform:uppercase;}
+.acont h2{font-family:var(--serif);font-size:clamp(2.6rem,4.5vw,4.2rem);font-weight:300;line-height:1.08;color:var(--white);margin-bottom:28px;}
+.acont h2 em{font-style:italic;color:var(--gold-lt);}
+.acont p{font-size:.9rem;font-weight:300;color:rgba(255,255,255,.55);line-height:1.9;margin-bottom:16px;}
+.degs{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0;}
+.deg{border:1px solid rgba(200,149,42,.25);color:var(--gold-lt);padding:6px 15px;font-size:.7rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;background:rgba(200,149,42,.05);transition:all .3s;}
+.deg:hover{background:rgba(200,149,42,.12);border-color:var(--gold);}
+.acta{display:inline-flex;align-items:center;gap:14px;border:1px solid rgba(200,149,42,.3);color:rgba(255,255,255,.75);padding:13px 28px;font-size:.75rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:all .3s;backdrop-filter:blur(10px);}
+.acta:hover{border-color:var(--gold);color:var(--gold-lt);background:rgba(200,149,42,.06);}
+.acta .aic{width:28px;height:28px;border-radius:50%;border:1px solid rgba(200,149,42,.3);display:flex;align-items:center;justify-content:center;font-size:.7rem;transition:all .3s;}
+.acta:hover .aic{background:var(--gold);border-color:var(--gold);color:var(--void);}
+
+/* ═══════════════════════
+   PRACTICE AREAS
+═══════════════════════ */
+.psec{padding:120px 5%;background:linear-gradient(180deg,#050910 0%,#030508 100%);position:relative;overflow:hidden;}
+.psec::before{content:'12';position:absolute;font-family:var(--impact);font-size:28rem;line-height:1;color:rgba(200,149,42,.024);right:-2%;bottom:-5%;pointer-events:none;user-select:none;letter-spacing:-10px;}
+.shead{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px;flex-wrap:wrap;gap:20px;}
+.shl h2{font-family:var(--serif);font-size:clamp(2.5rem,4vw,4rem);font-weight:300;color:var(--white);line-height:1.1;}
+.shl h2 em{font-style:italic;color:var(--gold-lt);}
+.shr{max-width:350px;text-align:right;}
+.shr p{font-size:.85rem;color:var(--muted);line-height:1.7;}
+.shr a{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;color:var(--gold);text-transform:uppercase;letter-spacing:1.2px;margin-top:12px;}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.04);}
+/* Specific styling only for the Family card in the Practice Areas grid */
+.pgrid a[href="practice-areas/family.html"].pcard {
+  background-image: url('family.jpeg'); /* Make sure family.jpeg is in the same folder as this HTML file */
+  background-size: cover;
+  background-position: center;
+  /* Adds an overlay so the white text stays readable over the image */
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6); 
+}
+.pcard{background:var(--deep);padding:34px 26px 28px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:all .4s cubic-bezier(.4,0,.2,1);opacity:0;transform:translateY(24px);text-decoration:none;color:inherit;}
+.pcard.in{opacity:1;transform:translateY(0);}
+.pcard::before{content:'';position:absolute;bottom:0;left:0;width:100%;height:0;background:linear-gradient(180deg,transparent,rgba(200,149,42,.06));transition:height .4s;}
+.pcard:hover::before{height:100%;}
+.pglow{position:absolute;bottom:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(200,149,42,.12),transparent 70%);opacity:0;transition:opacity .4s;pointer-events:none;}
+.pcard:hover .pglow{opacity:1;}
+.pcard:hover{transform:translateY(-5px);z-index:2;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.pico{width:48px;height:48px;border:1px solid rgba(200,149,42,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px;transition:all .4s;}
+.pico i{font-size:1.2rem;color:var(--gold);transition:all .4s;}
+.pcard:hover .pico{background:var(--gold);border-color:var(--gold);}
+.pcard:hover .pico i{color:var(--void);}
+.pcard h3{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--white);margin-bottom:10px;transition:color .3s;}
+.pcard:hover h3{color:var(--gold-lt);}
+.pcard p{font-size:.78rem;color:var(--muted);line-height:1.65;flex:1;}
+.parr{display:inline-flex;align-items:center;gap:6px;font-size:.65rem;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;margin-top:18px;opacity:0;transform:translateX(-8px);transition:all .3s;}
+.pcard:hover .parr{opacity:1;transform:translateX(0);}
+
+/* ═══════════════════════
+   WHY SECTION
+═══════════════════════ */
+.why{display:grid;grid-template-columns:1fr 1fr;min-height:650px;}
+.wl{background:linear-gradient(135deg,var(--gold) 0%,var(--amber) 100%);padding:80px 60px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+.wl::before{content:'"';position:absolute;top:-60px;left:30px;font-family:var(--serif);font-size:22rem;line-height:1;color:rgba(0,0,0,.08);pointer-events:none;}
+.wl blockquote{font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.4rem);font-style:italic;font-weight:300;color:var(--void);line-height:1.5;position:relative;z-index:1;margin-bottom:28px;}
+.wl cite{font-style:normal;font-size:.76rem;color:rgba(0,0,0,.5);letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:12px;}
+.wl cite::before{content:'';display:block;width:30px;height:1px;background:rgba(0,0,0,.3);}
+.wsgrid{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:48px;background:rgba(0,0,0,.15);}
+.ws{background:linear-gradient(135deg,rgba(0,0,0,.08),rgba(0,0,0,.04));padding:22px 24px;}
+.wsv{font-family:var(--impact);font-size:1.7rem;color:var(--void);letter-spacing:2px;display:block;}
+.wsl{font-size:.62rem;color:rgba(0,0,0,.5);letter-spacing:2px;text-transform:uppercase;display:block;margin-top:3px;}
+.wr{background:var(--navy);padding:80px 60px;display:flex;flex-direction:column;justify-content:center;}
+.wr h2{font-family:var(--serif);font-size:clamp(2.2rem,3vw,3.2rem);font-weight:300;color:var(--white);line-height:1.2;margin-bottom:14px;}
+.wr h2 em{font-style:italic;color:var(--gold-lt);}
+.wr .sub{font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:44px;}
+.pills{display:flex;flex-direction:column;gap:0;}
+.pill{display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.05);transition:all .3s;}
+.pill:last-child{border-bottom:none;}
+.pill:hover{padding-left:8px;}
+.pn{font-family:var(--impact);font-size:2rem;color:var(--gold);opacity:.3;line-height:1;flex-shrink:0;width:36px;transition:opacity .3s;}
+.pill:hover .pn{opacity:.8;}
+.pb h4{font-size:.82rem;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;}
+.pb p{font-size:.8rem;color:var(--muted);line-height:1.6;}
+
+/* ═══════════════════════
+   PROCESS
+═══════════════════════ */
+.procsec{padding:120px 5%;background:var(--void);text-align:center;position:relative;overflow:hidden;}
+.procsec::after{content:'PROCESS';position:absolute;font-family:var(--impact);font-size:22rem;letter-spacing:-5px;color:rgba(255,255,255,.011);bottom:-40px;left:50%;transform:translateX(-50%);white-space:nowrap;pointer-events:none;}
+.procsec h2{font-family:var(--serif);font-size:clamp(2.2rem,3.5vw,3.8rem);font-weight:300;color:var(--white);margin-bottom:80px;}
+.procsec h2 em{font-style:italic;color:var(--gold-lt);}
+.strow{display:grid;grid-template-columns:repeat(4,1fr);position:relative;max-width:1100px;margin:0 auto;}
+.strow::before{content:'';position:absolute;top:38px;left:calc(12.5% + 4px);right:calc(12.5% + 4px);height:1px;background:repeating-linear-gradient(to right,rgba(200,149,42,.4) 0px,rgba(200,149,42,.4) 8px,transparent 8px,transparent 16px);}
+.step{padding:0 20px;}
+.stcir{width:76px;height:76px;border-radius:50%;border:1px solid rgba(200,149,42,.25);background:var(--deep);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;position:relative;z-index:1;transition:all .5s;}
+.step:hover .stcir{background:linear-gradient(135deg,var(--gold),var(--amber));border-color:var(--amber);box-shadow:0 0 40px rgba(240,192,96,.25);}
+.stcir i{font-size:1.5rem;color:var(--gold);transition:color .4s;}
+.step:hover .stcir i{color:var(--void);}
+.stord{font-size:.6rem;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;display:block;}
+.step h3{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--white);margin-bottom:10px;}
+.step p{font-size:.78rem;color:var(--muted);line-height:1.65;}
+
+/* ═══════════════════════
+   BLOG
+═══════════════════════ */
+.blogsec{padding:120px 5%;background:var(--deep);position:relative;overflow:hidden;}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px;}
+.bc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);overflow:hidden;display:flex;flex-direction:column;transition:all .4s;text-decoration:none;color:inherit;position:relative;}
+.bc::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(to right,var(--gold),var(--amber));transition:width .4s;}
+.bc:hover::after{width:100%;}
+.bc:hover{transform:translateY(-8px);border-color:rgba(200,149,42,.2);box-shadow:0 30px 60px rgba(0,0,0,.4);background:rgba(255,255,255,.05);}
+.bctop{height:200px;background:linear-gradient(135deg,rgba(10,22,40,.8),rgba(6,12,20,.9));display:flex;align-items:center;justify-content:center;font-size:3.5rem;color:var(--gold);opacity:.5;position:relative;overflow:hidden;}
+.bctop::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,149,42,.04),transparent);}
+.bctag{position:absolute;top:14px;left:14px;background:rgba(200,149,42,.15);border:1px solid rgba(200,149,42,.3);color:var(--gold-lt);font-size:.62rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;}
+.bcbody{padding:26px 22px;flex:1;display:flex;flex-direction:column;}
+.bcbody h3{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--white);line-height:1.45;margin-bottom:12px;transition:color .3s;}
+.bc:hover .bcbody h3{color:var(--gold-lt);}
+.bcbody p{font-size:.8rem;color:var(--muted);line-height:1.7;flex:1;margin-bottom:18px;}
+.bcmeta{font-size:.68rem;color:rgba(107,125,150,.6);padding-top:14px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;}
+.bcrd{font-size:.65rem;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;display:flex;align-items:center;gap:6px;transition:gap .3s;}
+.bc:hover .bcrd{gap:10px;}
+
+/* ═══════════════════════
+   CTA
+═══════════════════════ */
+.ctasec{padding:130px 5%;background:var(--void);position:relative;overflow:hidden;text-align:center;}
+.cring{position:absolute;border-radius:50%;border:1px solid rgba(200,149,42,.08);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;animation:rp 6s ease-in-out infinite;}
+.cring:nth-child(1){width:400px;height:400px;animation-delay:0s;}
+.cring:nth-child(2){width:650px;height:650px;animation-delay:1.5s;}
+.cring:nth-child(3){width:900px;height:900px;animation-delay:3s;}
+@keyframes rp{0%,100%{opacity:.4;transform:translate(-50%,-50%) scale(1);}50%{opacity:1;transform:translate(-50%,-50%) scale(1.03);}}
+.ctain{max-width:680px;margin:0 auto;position:relative;z-index:2;}
+.ctain h2{font-family:var(--serif);font-size:clamp(2.8rem,5vw,5rem);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:20px;}
+.ctain h2 em{font-style:italic;color:var(--gold-lt);}
+.ctain p{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:44px;}
+.ctabtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.ctaout{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.7);padding:15px 28px;font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:1.5px;transition:all .3s;backdrop-filter:blur(8px);}
+.ctaout:hover{border-color:var(--gold);color:var(--gold-lt);background:rgba(200,149,42,.06);}
+
+/* ═══════════════════════
+   CONTACT STRIP
+═══════════════════════ */
+.cstrip{display:grid;grid-template-columns:repeat(3,1fr);background:var(--navy);border-top:1px solid rgba(200,149,42,.1);}
+.csi{padding:44px 40px;display:flex;align-items:center;gap:20px;border-right:1px solid rgba(255,255,255,.04);transition:background .3s;}
+.csi:last-child{border-right:none;}
+.csi:hover{background:rgba(200,149,42,.04);}
+.csic{width:50px;height:50px;border:1px solid rgba(200,149,42,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;}
+.csi:hover .csic{background:var(--gold);border-color:var(--gold);}
+.csi:hover .csic i{color:var(--void);}
+.csic i{font-size:1.1rem;color:var(--gold);transition:color .3s;}
+.cst h4{font-size:.63rem;font-weight:600;color:var(--muted);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:5px;}
+.cst a,.cst p{font-size:.9rem;color:rgba(255,255,255,.75);font-weight:300;}
+.cst a:hover{color:var(--gold-lt);}
+
+/* ═══════════════════════
+   FOOTER
+═══════════════════════ */
+footer{background:var(--void);border-top:1px solid rgba(255,255,255,.04);padding:72px 5% 28px;}
+.fgrid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:50px;margin-bottom:50px;}
+.flogo{font-family:var(--impact);font-size:1.5rem;letter-spacing:4px;color:var(--white);display:block;margin-bottom:4px;}
+.flogo span{color:transparent;-webkit-text-stroke:1px var(--gold);}
+.fsub{font-size:.58rem;color:var(--muted);letter-spacing:3px;text-transform:uppercase;display:block;margin-bottom:20px;}
+.fbrand p{font-size:.82rem;color:var(--muted);line-height:1.75;max-width:280px;margin-bottom:24px;font-weight:300;}
+.socs{display:flex;gap:8px;}
+.soc{width:36px;height:36px;border:1px solid rgba(200,149,42,.2);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.82rem;transition:all .3s;}
+.soc:hover{background:var(--gold);border-color:var(--gold);color:var(--void);}
+.fcol h4{font-size:.68rem;font-weight:600;color:rgba(255,255,255,.8);letter-spacing:2.5px;text-transform:uppercase;padding-bottom:14px;margin-bottom:18px;border-bottom:1px solid rgba(200,149,42,.12);}
+.fcol ul{list-style:none;}
+.fcol ul li{margin-bottom:10px;}
+.fcol ul li a{font-size:.82rem;color:var(--muted);font-weight:300;display:flex;align-items:center;gap:8px;transition:all .3s;}
+.fcol ul li a:hover{color:var(--gold-lt);padding-left:5px;}
+.fcol ul li a i{font-size:.55rem;color:var(--gold);opacity:.5;}
+.fbot{border-top:1px solid rgba(255,255,255,.04);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.fbot p{font-size:.75rem;color:rgba(107,125,150,.45);}
+.fbot a{color:var(--gold);}
+
+/* WHATSAPP */
+.wa{position:fixed;bottom:32px;right:32px;width:54px;height:54px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--white);z-index:9997;box-shadow:0 8px 24px rgba(37,211,102,.4);transition:all .3s;}
+.wa:hover{transform:scale(1.12);box-shadow:0 12px 36px rgba(37,211,102,.55);}
+.wap{position:absolute;width:100%;height:100%;border-radius:50%;background:rgba(37,211,102,.3);animation:wp 2.5s ease-out infinite;}
+@keyframes wp{0%{transform:scale(1);opacity:.7;}100%{transform:scale(2);opacity:0;}}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(40px);}to{opacity:1;transform:translateX(0);}}
+.rev{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s;}
+.revl{opacity:0;transform:translateX(-30px);transition:opacity .7s,transform .7s;}
+.revr{opacity:0;transform:translateX(30px);transition:opacity .7s,transform .7s;}
+.rev.in,.revl.in,.revr.in{opacity:1;transform:translateY(0) translateX(0);}
+
+/* RESPONSIVE */
+@media(max-width:1100px){.hbody{grid-template-columns:1fr;}.hcard{display:none;}.about{grid-template-columns:1fr;}.pgrid{grid-template-columns:repeat(3,1fr);}.why{grid-template-columns:1fr;}.fgrid{grid-template-columns:1fr 1fr;}}
+@media(max-width:768px){.pgrid{grid-template-columns:1fr 1fr;}.strow{grid-template-columns:1fr 1fr;}.strow::before{display:none;}.bgrid{grid-template-columns:1fr;}.cstrip{grid-template-columns:1fr;}.csi{border-right:none;border-bottom:1px solid rgba(255,255,255,.04);}.topbar-l span:first-child{display:none;}}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+<div id="cdot"></div>
+<div id="cring"></div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-l">
+    <span><i class="fa-solid fa-location-dot"></i>Bangalore, Karnataka, India</span>
+    <div class="tsep"></div>
+    <a href="mailto:advocateradhachaudhary@gmail.com"><i class="fa-solid fa-envelope"></i>advocateradhachaudhary@gmail.com</a>
+  </div>
+  <div class="topbar-r">
+    <a href="tel:+919008342829"><i class="fa-solid fa-phone"></i>24/7: +91 9008342829</a>
+    <div class="tsep"></div>
+    <a href="https://wa.me/919008342829" target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<!-- HEADER -->
+<header title="A Legal Firm - Your Legal Consultant and Advisor">
+ <a href="index.php" class="logo">
+    <img src="radha_associates_logo_transparent8.png" alt="Radha Associates" class="logo-mark">
+    <img src="downpart.png" alt="Radha Associates - A Legal Firm" class="logo-text">
+    <span class="logo-tooltip">A Legal Firm — Your Legal Consultant & Advisor</span>
+</a>
+  <nav>
+    <div class="ni"><a href="legalaudience.html" class="nl active">Home</a></div>
+    <div class="ni"><a href="about.php" class="nl">About</a></div>
+    <div class="ni">
+      <a href="#" class="nl">Practice Areas <i class="fa-solid fa-chevron-down nc"></i></a>
+      <ul class="ndrop">
+        <li><a href="practice-areas/family.html"><i class="fa-solid fa-people-roof"></i>Family</a></li>
+        <li><a href="practice-areas/consumer.html"><i class="fa-solid fa-cart-shopping"></i>Consumer</a></li>
+        <li><a href="practice-areas/banking.html"><i class="fa-solid fa-building-columns"></i>Banking</a></li>
+        <li><a href="practice-areas/intellectual-property.html"><i class="fa-solid fa-copyright"></i>Intellectual Property</a></li>
+        <li><a href="practice-areas/property.html"><i class="fa-solid fa-house-chimney"></i>Property</a></li>
+        <li><a href="practice-areas/cybercrime.html"><i class="fa-solid fa-laptop-code"></i>Cyber Crime</a></li>
+        <li><a href="practice-areas/civil.html"><i class="fa-solid fa-scale-balanced"></i>Civil</a></li>
+        <li><a href="practice-areas/company.html"><i class="fa-solid fa-handshake"></i>Company</a></li>
+        <li><a href="practice-areas/criminal.html"><i class="fa-solid fa-gavel"></i>Criminal</a></li>
+        <li><a href="practice-areas/tax.html"><i class="fa-solid fa-file-invoice-dollar"></i>Tax</a></li>
+        <li><a href="practice-areas/accident.html"><i class="fa-solid fa-car-burst"></i>Accident</a></li>
+        <li><a href="practice-areas/labour.html"><i class="fa-solid fa-helmet-safety"></i>Labour</a></li>
+      </ul>
+    </div>
+    <div class="ni"><a href="clients.php" class="nl">Clients</a></div>
+    <div class="ni"><a href="blog/index.php" class="nl">Blog</a></div>
+    <div class="ni"><a href="contact.html" class="nl">Contact</a></div>
+    <div class="ni"><a href="https://docs.google.com/forms/d/1oxnBQ5E3JTU8k_VwHx9Oa1EBj7oZ-01Lo8Edvnmp-_k/viewform?pli=1&pli=1&edit_requested=true" class="nl ncta">Consult</a></div>
+  </nav>
+</header>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hvid">
+    <video autoplay muted loop playsinline>
+      <source src="indian-law-firm-professional-background.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hov1"></div>
+  <div class="hov2"></div>
+  <div class="hscans"></div>
+  <canvas id="hcanvas"></canvas>
+ 
+
+  <div class="hbody">
+    <div class="hleft">
+      <div class="hbadge">
+        <div class="hbdot"></div>
+        <span>Premium Legal Counsel &nbsp;·&nbsp; Bangalore, Karnataka</span>
+      </div>
+      <h1 class="hh1">
+        <span class="l1">Turning</span>
+        <span class="l2">Injustice</span>
+        <span class="l3">Into Justice.</span>
+      </h1>
+      <p class="hdesc">Adv. Radha Chaudhary — MA · MBA · LLB — brings 8+ years of relentless expertise across Karnataka High Court, DRTs, Consumer Forums, and Criminal Courts. Your rights, fiercely defended.</p>
+      <div class="hacts">
+        <a href="contact.php" class="hbtnp">Schedule Consultation <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="about.php" class="hbtng">Our Story <i class="fa-solid fa-play" style="font-size:.6rem;"></i></a>
+      </div>
+      <div class="hstats">
+        <div class="hs"><span class="sn" data-target="8">0</span><span class="sl">Years+ Exp.</span></div>
+        <div class="hs"><span class="sn" data-target="12">0</span><span class="sl">Practice Areas</span></div>
+        <div class="hs"><span class="sn">24/7</span><span class="sl">Legal Support</span></div>
+        <div class="hs"><span class="sn">100%</span><span class="sl">Commitment</span></div>
+      </div>
+    </div>
+
+    
+</section>
+
+<!-- MARQUEE -->
+<div class="mqwrap">
+  <div class="mqtrack">
+    <span class="mqi">Family Law <span class="mqdot">◆</span></span>
+    <span class="mqi">Consumer Protection <span class="mqdot">◆</span></span>
+    <span class="mqi">Banking &amp; DRT <span class="mqdot">◆</span></span>
+    <span class="mqi">Intellectual Property <span class="mqdot">◆</span></span>
+    <span class="mqi">Property Law <span class="mqdot">◆</span></span>
+    <span class="mqi">Cyber Crime <span class="mqdot">◆</span></span>
+    <span class="mqi">Civil Litigation <span class="mqdot">◆</span></span>
+    <span class="mqi">Company Law <span class="mqdot">◆</span></span>
+    <span class="mqi">Criminal Defense <span class="mqdot">◆</span></span>
+    <span class="mqi">Taxation <span class="mqdot">◆</span></span>
+    <span class="mqi">Accident Claims <span class="mqdot">◆</span></span>
+    <span class="mqi">Labour Law <span class="mqdot">◆</span></span>
+    <span class="mqi">Family Law <span class="mqdot">◆</span></span>
+    <span class="mqi">Consumer Protection <span class="mqdot">◆</span></span>
+    <span class="mqi">Banking &amp; DRT <span class="mqdot">◆</span></span>
+    <span class="mqi">Intellectual Property <span class="mqdot">◆</span></span>
+    <span class="mqi">Property Law <span class="mqdot">◆</span></span>
+    <span class="mqi">Cyber Crime <span class="mqdot">◆</span></span>
+    <span class="mqi">Civil Litigation <span class="mqdot">◆</span></span>
+    <span class="mqi">Company Law <span class="mqdot">◆</span></span>
+    <span class="mqi">Criminal Defense <span class="mqdot">◆</span></span>
+    <span class="mqi">Taxation <span class="mqdot">◆</span></span>
+    <span class="mqi">Accident Claims <span class="mqdot">◆</span></span>
+    <span class="mqi">Labour Law <span class="mqdot">◆</span></span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="avis revl">
+    <div class="aimgw">
+      <img src="intellectualpropertyrights.jpeg" alt="Adv. Radha Chaudhary — Legal Excellence">
+      <div class="abadge"><span class="bn">8+</span><span class="bt">Years of Practice</span></div>
+    </div>
+  </div>
+  <div class="acont revr">
+    <div class="eyebrow"><div class="el"></div><span class="et">About the Advocate</span></div>
+    <h2>Adv. Radha<br><em>Chaudhary</em></h2>
+    <p>One of Bangalore's foremost advocates, Radha Chaudhary brings a rare combination of deep legal scholarship, corporate acumen, and a fierce commitment to justice. She practices across the High Court of Karnataka, Debt Recovery Tribunals, Consumer Forums, and all Civil &amp; Criminal Courts.</p>
+    <p>Her multi-disciplinary academic foundation — MA, MBA, LLB — enables an approach that is legally precise, commercially aware, and deeply human, ensuring every client is genuinely championed.</p>
+    <div class="degs">
+      <span class="deg">MA</span><span class="deg">MBA</span><span class="deg">LLB</span>
+      <span class="deg">High Court</span><span class="deg">DRT Specialist</span><span class="deg">Arbitration</span>
+    </div>
+    <a href="about.php" class="acta">Full Profile <span class="aic"><i class="fa-solid fa-arrow-right"></i></span></a>
+  </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section class="psec">
+  <div class="shead rev">
+    <div class="shl">
+      <div class="eyebrow" style="margin-bottom:12px;"><div class="el"></div><span class="et">12 Specialisations</span></div>
+      <h2>Areas of <em>Practice</em></h2>
+    </div>
+    <div class="shr">
+      <p>Comprehensive legal representation across every major domain — personal, corporate, digital, and criminal.</p>
+      <a href="#">View All <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+  <div class="pgrid">
+    <a href="practice-areas/family.html" class="pcard" style="transition-delay:.04s"><div class="pglow"></div><div class="pico"><i class="fa-solid fa-people-roof"></i></div><h3>Family</h3><p>Divorce, alimony, child custody, matrimonial disputes handled with care and legal precision.</p><span class="parr">Explore <i class="fa-solid fa-arrow-right"></i></span></a>
+    <a href="practice-areas/consumer.html" class="pcard" style="transition-delay:.08s"><div class="pglow"></div><div class="pico"><i class="fa-solid fa-cart-shopping"></i></div><h3>Consumer</h3><p>Protecting consumers against defective products, unfair trade, and service failures.</p><span class="parr">Explore <i class="fa-solid fa-arrow-right"></i></span></a>
+    <a href="practice-areas/banking.html" class="pcard" style="transition-delay:.12s"><div class="pglow"></div><div class="pico"><i class="fa-solid fa-building-columns"></i></div><h3>Banking &amp; DRT</h3><p>Expert DRT representation, NPA recovery, and complex banking regulatory disputes.</p><span class="parr">Explore <i class="fa-solid fa-arrow-right"></i></span></a>
+    <a href="practice-areas/intellectual-property.html" class="pcard" style="transition-delay:.16s"><div class="pglow"></div><div class="pico"><i class="fa-solid fa-copyright"></i></div><h3>Intellectual Property</h3><p>Trademark, copyright, patent protection and IP litigation across jurisdictions.</p><span class="parr">Explore <i class="fa-solid fa-arrow-right"></i></span></a>
+    <a href="practice-areas/property.html" class="pcard" style="transition-delay:.20s"><div class="pglow"></div><div class="pico"><i class="fa-solid fa-house-chimney"></i></div><h3>Property</h3><p>Title verification, registration, real estate disputes and conveyancing across Karnataka.</p><span class="parr">Explore <i class="fa-solid fa-arrow-right"></i></span></a>
+    <a href="practice-areas/cyber-crime.html" class="pcard" style="transition-delay:.24s"><div class="pglow"></div><div class="pico"><i class="fa-solid fa-laptop-code"></i></div><h3>Cyber Crime</h3><p>Online fraud, data theft, digital harassment and IT Act offences with modern strategy.</p><span class="parr">Explore <i class="fa-solid fa-arrow-right"></i></span></a>
+    <a href="practice-areas/civil.html" class="pcard" style="transition-delay:.28s"><div class="pglow"></div><div class="pico"><i class="fa-solid fa-scale-balanced"></i></div><h3>Civil</h3><p>Contract disputes, injunctions, property claims, and civil litigation proceedings.</p><span class="parr">Explore <i class="fa-solid fa-arrow-right"></i></span></a>
+    <a href="practice-areas/company.html" class="pcard" style="transition-delay:.32s"><div class="pglow"></div><div class="pico"><i class="fa-solid fa-handshake"></i></div><h3>Company</h3><p>Corporate disputes, NCLT matters, compliance advisory and shareholder rights.</p><span class="parr">Explore <i class="fa-solid fa-arrow-right"></i></span></a>
+    <a href="practice-areas/criminal.html" class="pcard" style="transition-delay:.36s"><div class="pglow"></div><div class="pico"><i class="fa-solid fa-gavel"></i></div><h3>Criminal</h3><p>Bail, trial defense, FIR quashing and aggressive representation under IPC &amp; BNS.</p><span class="parr">Explore <i class="fa-solid fa-arrow-right"></i></span></a>
+    <a href="practice-areas/tax.html" class="pcard" style="transition-delay:.40s"><div class="pglow"></div><div class="pico"><i class="fa-solid fa-file-invoice-dollar"></i></div><h3>Taxation</h3><p>GST disputes, income tax, direct &amp; indirect tax advisory and appellate matters.</p><span class="parr">Explore <i class="fa-solid fa-arrow-right"></i></span></a>
+    <a href="practice-areas/accident.html" class="pcard" style="transition-delay:.44s"><div class="pglow"></div><div class="pico"><i class="fa-solid fa-car-burst"></i></div><h3>Accident Claims</h3><p>Maximum compensation at MACTs for motor accident victims with expert legal advocacy.</p><span class="parr">Explore <i class="fa-solid fa-arrow-right"></i></span></a>
+    <a href="practice-areas/labour.html" class="pcard" style="transition-delay:.48s"><div class="pglow"></div><div class="pico"><i class="fa-solid fa-helmet-safety"></i></div><h3>Labour</h3><p>Wrongful termination, ESIC/PF, workplace safety and industrial tribunal matters.</p><span class="parr">Explore <i class="fa-solid fa-arrow-right"></i></span></a>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why">
+  <div class="wl revl">
+    <blockquote>"Every property tells a story through its title — we make sure yours has no hidden chapters."</blockquote>
+    Property Due Diligence &amp; Dispute Resolution
+    <a href="practice-areas/property-dispute.html" class="wlcta">
+      <span>Facing a Property Dispute? Click For More Details</span>
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+  <div class="wr revr">
+    <div class="eyebrow" style="margin-bottom:16px;"><div class="el" style="background:var(--gold-lt);"></div><span class="et" style="color:var(--gold-lt);">Why Choose Us</span></div>
+    <h2>The Legal<br>Advantage<br>You <em>Deserve</em></h2>
+    <p class="sub">Every client deserves fierce advocacy and strategic thinking — not just representation. Here's what sets us apart.</p>
+    <div class="pills">
+      <div class="pill"><span class="pn">01</span><div class="pb"><h4>Multi-Court Expertise</h4><p>Practiced across High Court Karnataka, DRT, Consumer Forums, and all Civil &amp; Criminal Courts in Bangalore.</p></div></div>
+      <div class="pill"><span class="pn">02</span><div class="pb"><h4>Strategic Business Thinking</h4><p>MBA background enables commercial reasoning — understanding the business impact of every legal choice.</p></div></div>
+      <div class="pill"><span class="pn">03</span><div class="pb"><h4>Radical Transparency</h4><p>No jargon, no surprises. You stay informed, involved and empowered throughout your case.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="procsec">
+  <div class="eyebrow" style="justify-content:center;margin-bottom:14px;"><div class="el"></div><span class="et">How We Work</span></div>
+  <h2>Our <em>Process</em></h2>
+  <div class="strow">
+    <div class="step rev" style="transition-delay:0s"><div class="stcir"><i class="fa-solid fa-phone-volume"></i></div><span class="stord">Step 01</span><h3>Initial Consultation</h3><p>Confidential discussion to understand your situation, goals, and legal options.</p></div>
+    <div class="step rev" style="transition-delay:.15s"><div class="stcir"><i class="fa-solid fa-magnifying-glass"></i></div><span class="stord">Step 02</span><h3>Case Evaluation</h3><p>Deep analysis of facts, evidence, and applicable law for the strongest strategy.</p></div>
+    <div class="step rev" style="transition-delay:.3s"><div class="stcir"><i class="fa-solid fa-file-signature"></i></div><span class="stord">Step 03</span><h3>Legal Strategy</h3><p>Tailored action plan covering filings, arguments, negotiation and documentation.</p></div>
+   <div class="step rev" style="transition-delay:.45s"><div class="stcir"><i class="fa-solid fa-trophy"></i></div><span class="stord">Step 04</span><h3>Resolution</h3><p>Decisive representation in court or negotiation — always aiming for the best outcome.</p></div>
+  </div>
+</section>
+<section class="psec" style="padding-top: 80px; padding-bottom: 80px; border-bottom: 1px solid rgba(255,255,255,.04);">
+  <div class="shead rev">
+    <div class="shl">
+      <div class="eyebrow" style="margin-bottom:12px;"><div class="el"></div><span class="et">Live Updates</span></div>
+      <h2>Recent <em>Activity</em></h2>
+    </div>
+    <div class="shr">
+      <p>Follow our latest legal insights, case updates, and professional milestones directly on LinkedIn.</p>
+      <a href="https://www.linkedin.com/in/adv-radha-chaudhary-238565b/" target="_blank">Connect on LinkedIn <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <div class="linkedin-container rev" style="max-width: 1100px; margin: 40px auto 0; padding: 0; background: transparent; border: none;">
+    
+    <div class="sk-ww-linkedin-profile-post" data-embed-id="25676355"></div><script src="https://widgets.sociablekit.com/linkedin-profile-posts/widget.js" defer></script>
+    
+    
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blogsec">
+  <div class="shead rev">
+    <div class="shl">
+      <div class="eyebrow" style="margin-bottom:12px;"><div class="el"></div><span class="et">Legal Insights</span></div>
+      <h2>Latest <em>Articles</em></h2>
+    </div>
+    <div class="shr">
+      <p>Thought leadership and legal commentary by Adv. Radha Chaudhary.</p>
+      <a href="https://thelegalaudience.wordpress.com/blog/" target="_blank">All Articles <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+  <div class="bgrid">
+    <a href="https://www.linkedin.com/pulse/divorce-legal-remedy-impulsive-choice-adv-radha-chaudhary-owf2c/" target="_blank" class="bc rev" style="transition-delay:.05s">
+      <div class="bctop"><span class="bctag">Family Law</span><i class="fa-solid fa-ring fa-2x"></i></div>
+      <div class="bcbody"><h3>Divorce: A Legal Remedy, Not an Impulsive Choice</h3><p>Navigating the legal and emotional dimensions of separation in India — when to seek counsel and how the process protects both parties.</p><div class="bcmeta"><span><i class="fa-regular fa-clock"></i>&nbsp;3 min read</span><span class="bcrd">Read <i class="fa-solid fa-arrow-right"></i></span></div></div>
+    </a>
+    <a href="https://www.linkedin.com/pulse/rule-law-vs-spirit-finding-balance-legal-practice-adv-radha-chaudhary-8jqpc/" target="_blank" class="bc rev" style="transition-delay:.15s">
+      <div class="bctop"><span class="bctag">Legal Philosophy</span><i class="fa-solid fa-scale-balanced fa-2x"></i></div>
+      <div class="bcbody"><h3>Rule of Law vs. Spirit of Law: Finding the Balance</h3><p>Where the letter and spirit of law diverge — how Indian courts navigate this critical tension in modern legal practice.</p><div class="bcmeta"><span><i class="fa-regular fa-clock"></i>&nbsp;3 min read</span><span class="bcrd">Read <i class="fa-solid fa-arrow-right"></i></span></div></div>
+    </a>
+    <a href="https://www.linkedin.com/pulse/fsl-unveiling-science-behind-crime-key-forensic-adv-radha-chaudhary-4ndbc/" target="_blank" class="bc rev" style="transition-delay:.25s">
+      <div class="bctop"><span class="bctag">Criminal Law</span><i class="fa-solid fa-flask fa-2x"></i></div>
+      <div class="bcbody"><h3>FSL: Unveiling the Science Behind Crime</h3><p>The critical role of Forensic Science Laboratories in criminal trials — evidence, admissibility, and impact on verdicts.</p><div class="bcmeta"><span><i class="fa-regular fa-clock"></i>&nbsp;2 min read</span><span class="bcrd">Read <i class="fa-solid fa-arrow-right"></i></span></div></div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctasec">
+  <div class="cring"></div><div class="cring"></div><div class="cring"></div>
+  <div class="ctain rev">
+    <div class="eyebrow" style="justify-content:center;margin-bottom:16px;"><div class="el"></div><span class="et">Get in Touch</span></div>
+    <h2>Need Immediate<br><em>Legal Opinion?</em></h2>
+    <p>Every legal challenge has a solution. Contact us today for a confidential consultation with Adv. Radha Chaudhary.</p>
+    <div class="ctabtns">
+      <a href="contact.php" class="hbtnp">Contact Our Chambers <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="tel:+919008342829" class="ctaout"><i class="fa-solid fa-phone"></i> +91 9008342829</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT STRIP -->
+<div class="cstrip">
+  <div class="csi"><div class="csic"><i class="fa-solid fa-location-dot"></i></div><div class="cst"><h4>Location</h4><p>Bangalore, Karnataka, India</p><a href="https://www.google.com/maps/place/High+Court+of+Karnataka/@12.9778874,77.5925547,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1671daf4f4bd:0x859e7bf7fb58d139!8m2!3d12.9778874!4d77.5925547!16zL20vMDdyMzZq?hl=en&entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="ctaout">View on Google Maps</a></div></div>
+  <div class="csi"><div class="csic"><i class="fa-solid fa-phone"></i></div><div class="cst"><h4>24/7 Legal Helpline</h4><a href="tel:+919008342829">+91 9008342829</a></div></div>
+  <div class="csi"><div class="csic"><i class="fa-solid fa-envelope"></i></div><div class="cst"><h4>Email</h4><a href="mailto:advocateradhachaudhary@gmail.com">advocateradhachaudhary@gmail.com</a></div></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fgrid">
+    <div class="fbrand">
+      <img src="logo.jpeg" alt="Radha Associates" style="height:48px; width:auto; background:#111; padding:4px 10px; border-radius:4px; display:block; margin-bottom:12px;">
+      <p>Strategic legal counsel and passionate advocacy protecting your interests across all courts of Bangalore and India.</p>
+      <div class="socs">
+        <a href="https://wa.me/919008342829" target="_blank" class="soc"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/adv-radha-chaudhary-238565b/" target="_blank" class="soc"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://thelegalaudience.wordpress.com/blog/" target="_blank" class="soc"><i class="fa-brands fa-wordpress"></i></a>
+      </div>
+    </div>
+    <div class="fcol"><h4>Quick Links</h4><ul><li><a href="index.php"><i class="fa-solid fa-chevron-right"></i> Home</a></li><li><a href="about.php"><i class="fa-solid fa-chevron-right"></i> About</a></li><li><a href="clients.php"><i class="fa-solid fa-chevron-right"></i> Clients</a></li><li><a href="blog/index.php"><i class="fa-solid fa-chevron-right"></i> Blog</a></li><li><a href="contact.php"><i class="fa-solid fa-chevron-right"></i> Contact</a></li></ul></div>
+    <div class="fcol"><h4>Practice Areas</h4><ul><li><a href="practice-areas/family.php"><i class="fa-solid fa-chevron-right"></i> Family</a></li><li><a href="practice-areas/consumer.php"><i class="fa-solid fa-chevron-right"></i> Consumer</a></li><li><a href="practice-areas/banking.php"><i class="fa-solid fa-chevron-right"></i> Banking</a></li><li><a href="practice-areas/criminal.php"><i class="fa-solid fa-chevron-right"></i> Criminal</a></li><li><a href="practice-areas/cyber-crime.php"><i class="fa-solid fa-chevron-right"></i> Cyber Crime</a></li><li><a href="practice-areas/property.php"><i class="fa-solid fa-chevron-right"></i> Property</a></li></ul></div>
+    <div class="fcol"><h4>Contact</h4><ul><li><a href="tel:+919008342829"><i class="fa-solid fa-phone"></i> +91 9008342829</a></li><li><a href="mailto:advocateradhachaudhary@gmail.com"><i class="fa-solid fa-envelope"></i> Email Us</a></li><li><a href="contact.php"><i class="fa-solid fa-location-dot"></i> Bangalore, KA</a></li><li><a href="https://wa.me/919008342829" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li></ul></div>
+  </div>
+  <div class="fbot">
+    <p>&copy; 2026 <a href="#">Legal Audience</a> — Adv. Radha Chaudhary. All rights reserved.</p>
+    <p>Bangalore, Karnataka, India</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/919008342829" class="wa" target="_blank">
+  <div class="wap"></div>
+  <i class="fa-brands fa-whatsapp" style="position:relative;z-index:1;"></i>
+</a>
+
+<script>
+// Custom cursor
+const cdot=document.getElementById('cdot'),cring=document.getElementById('cring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cdot.style.left=mx+'px';cdot.style.top=my+'px';});
+(function ar(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;cring.style.left=rx+'px';cring.style.top=ry+'px';requestAnimationFrame(ar);})();
+document.querySelectorAll('a,button,.pcard,.bc').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cring.style.width='60px';cring.style.height='60px';cring.style.borderColor='rgba(240,192,96,.8)';cdot.style.transform='translate(-50%,-50%) scale(0)';});
+  el.addEventListener('mouseleave',()=>{cring.style.width='36px';cring.style.height='36px';cring.style.borderColor='rgba(240,192,96,.5)';cdot.style.transform='translate(-50%,-50%) scale(1)';});
+});
+
+// Particle canvas
+(function(){
+  const c=document.getElementById('hcanvas');if(!c)return;
+  const ctx=c.getContext('2d');let W,H,pts=[];
+  function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight;}
+  resize();window.addEventListener('resize',resize);
+  for(let i=0;i<65;i++)pts.push({x:Math.random()*window.innerWidth,y:Math.random()*window.innerHeight,r:Math.random()*1.4+.3,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,o:Math.random()*.55+.15});
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(p=>{
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=W;if(p.x>W)p.x=0;
+      if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(200,149,42,${p.o})`;ctx.fill();
+    });
+    for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<110){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(200,149,42,${.1*(1-d/110)})`;ctx.lineWidth=.5;ctx.stroke();}
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// Scroll reveal
+const allR=[...document.querySelectorAll('.rev,.revl,.revr,.pcard')];
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),0);io.unobserve(e.target);}});},{threshold:.1});
+allR.forEach(el=>io.observe(el));
+
+// Counter
+function cnt(el){const t=+el.dataset.target;if(!t)return;let c=0;const s=t/40;const ti=setInterval(()=>{c+=s;if(c>=t){c=t;clearInterval(ti);}el.textContent=Math.floor(c)+'+';},40);}
+const hs=document.querySelectorAll('.sn[data-target]');
+const sio=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){cnt(e.target);sio.unobserve(e.target);}});},{threshold:.5});
+hs.forEach(el=>sio.observe(el));
+</script>
+</body>
+</html>
